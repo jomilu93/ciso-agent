@@ -16,7 +16,7 @@ dependencies = [
     "langchain-openai",
     "pypdf",
     "faiss-cpu",
-    "tiktoken",
+    "tiktoken"
     ]
 
 [project.optional-dependencies]
