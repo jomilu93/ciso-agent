@@ -1,10 +1,10 @@
 from fastmcp import FastMCP
-from ciso_rag import setup_ciso_rag
+from ciso_rag import setup_rag
 from ciso_prompts import prompt_CoT
 
 mcp = FastMCP(name="CISO-Agent-Phishing")
 
-vectorstore = setup_ciso_rag()
+vectorstore = setup_rag()
 
 @mcp.tool(
     name="CISO Agent - Phishing",
@@ -32,8 +32,11 @@ def ciso_check(url) -> str:
     context_text = "\n\n".join([d.page_content for d in docs])
 
     # c. Create prompt
-    prompt = prompt_CoT(query, context_text)
+    prompt = prompt_CoT(url, context_text)
 
     # d. Generate response
     response = llm.invoke(prompt)
     return response.content
+
+if __name__ == "__main__":
+    mcp.run()
