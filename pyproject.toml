@@ -4,7 +4,7 @@ version = "1"
 description = "CISO Agent, an MCP server tool that serves as your organization's Chief Security Information Officer, helping agents stay safe againt phishing attacks."
 authors = [
   { name = "Jose Miguel Luna", email = "jlunamugica26@gsb.columbia.edu" },
-  { name = "Ron Litvak", email = "rlitvak26@gsb.columbia.edu" }
+  { name = "Ron Litvak", email = "rlitvak26@gsb.columbia.edu" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"
