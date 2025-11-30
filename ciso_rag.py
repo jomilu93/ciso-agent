@@ -34,7 +34,7 @@ def setup_rag():
         os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API Key: ")
 
     # 2. Load the training PDF
-    pdf_path = "/CISO_Knowledge_Base/CISA_Phising_Training.pdf"
+    pdf_path = "CISO_Knowledge_Base/CISA_Phising_Training.pdf"
     print(f"Loading PDF from: {pdf_path}")
 
     try:
