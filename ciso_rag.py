@@ -34,7 +34,9 @@ def setup_rag():
         os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API Key: ")
 
     # 2. Load the training PDF
-    pdf_path = "CISO_Knowledge_Base/CISA_Phising_Training.pdf"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    pdf_path = os.path.join(base_dir, "CISO_Knowledge_Base", "CISA_Phising_Training.pdf")
+    
     print(f"Loading PDF from: {pdf_path}")
 
     try:
@@ -55,7 +57,8 @@ def setup_rag():
 
         print(f"Successfully indexed {len(splits)} document chunks into FAISS vectorstore.")
 
+        return vectorstore
+
     except Exception as e:
         print(f"An error occurred during RAG setup: {e}")
-
-        return vectorstore
+        raise
