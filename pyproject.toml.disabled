@@ -1,0 +1,15 @@
+[project]
+name = "ciso_agent_phishing"
+version = "0.1.0"
+description = "CISO Agent, an MCP server tool that serves as your organization's Chief Security Information Officer, helping agents stay safe against phishing attacks."
+authors = [
+  { name = "Jose Miguel Luna", email = "jlunamugica26@gsb.columbia.edu" },
+  { name = "Ron Litvak", email = "rlitvak26@gsb.columbia.edu" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+  "fastmcp>=2.13.1",
+]
